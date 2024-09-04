@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="27f66a3149f94249b68f162a1bd45af6" Name="Diagram1" ZoomLevel="135">
+        <EntityTypeShape EntityType="Barter_OficialModel.Carrito" Width="2.25" PointX="1" PointY="1.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="Barter_OficialModel.Local" Width="1.5" PointX="9" PointY="1.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="Barter_OficialModel.Local_Producto" Width="1.5" PointX="6.875" PointY="1.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="Barter_OficialModel.Producto" Width="1.875" PointX="4.125" PointY="1.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="Barter_OficialModel.Producto_Usuario" Width="1.625" PointX="1.875" PointY="5" IsExpanded="true" />
+        <EntityTypeShape EntityType="Barter_OficialModel.sysdiagrams" Width="1.5" PointX="11.75" PointY="2.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="Barter_OficialModel.Usuario" Width="2.375" PointX="6.125" PointY="4" IsExpanded="true" />
+        <EntityTypeShape EntityType="Barter_OficialModel.Usuario_Local" Width="1.5" PointX="9" PointY="4.375" IsExpanded="true" />
+        <AssociationConnector Association="Barter_OficialModel.FK_Producto_Carrito" ManuallyRouted="false" />
+        <AssociationConnector Association="Barter_OficialModel.FK_Usuario_Carrito" ManuallyRouted="false" />
+        <AssociationConnector Association="Barter_OficialModel.FK_Local_Producto" ManuallyRouted="false" />
+        <AssociationConnector Association="Barter_OficialModel.FK_Local_Usuario" ManuallyRouted="false" />
+        <AssociationConnector Association="Barter_OficialModel.FK_Producto_Local" ManuallyRouted="false" />
+        <AssociationConnector Association="Barter_OficialModel.FK_Producto_Usuario" ManuallyRouted="false" />
+        <AssociationConnector Association="Barter_OficialModel.FK_Usuario_Producto" ManuallyRouted="false" />
+        <AssociationConnector Association="Barter_OficialModel.FK_Usuario_Local" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

@@ -1,0 +1,31 @@
+﻿@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Mongolian&display=swap');
+
+p {
+    font-family: 'Noto Sans Mongolian', sans-serif;
+    color: aqua;
+    height: 130px;
+    width: 130px;
+}
+
+body {
+    height: 120px;
+    background-color: white;
+}
+
+a {
+    color: black;
+}
+
+h6 {
+    color: rgb(234, 255, 0);
+    background-color: rgb(255, 0, 0);
+}
+
+div {
+    color: rgb(48, 221, 18);
+    p .solid
+
+{
+    border-style: solid;
+}
+}
