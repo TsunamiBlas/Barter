@@ -19,6 +19,7 @@ namespace Barter
         {
             this.Producto = new HashSet<Producto>();
             this.Usuario = new HashSet<Usuario>();
+            this.Producto_Usuario = new HashSet<Producto_Usuario>();
         }
     
         public int Id_Carrito { get; set; }
@@ -33,5 +34,7 @@ namespace Barter
         public virtual ICollection<Producto> Producto { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Usuario> Usuario { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<Producto_Usuario> Producto_Usuario { get; set; }
     }
 }

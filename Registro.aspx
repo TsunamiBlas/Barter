@@ -38,6 +38,8 @@
             <br>
             <asp:TextBox ID="FechaNacimiento" runat="server" CssClass="FormatoTexto" placeholder="Fecha" TextMode="Date"></asp:TextBox>
             <br><br>
+            <small>Debes de ser mayor de 18.</small>
+            <br><br>
             <label for="Telefono">Teléfono</label>
             <br>  
             <asp:TextBox ID="Telefono" runat="server" CssClass="FormatoTexto" placeholder="Telefono de contacto"></asp:TextBox>
@@ -46,13 +48,17 @@
             <br>
             <asp:TextBox ID="Contraseña" runat="server" CssClass="FormatoTexto" placeholder="Contraseña" TextMode="Password"></asp:TextBox>
             <br><br>
+            <small>Recuerda que la contraseña es de máximo 5 caracteres.</small>
+            <br><br>
             <label for="Confirmacion">Confirmación Contraseña</label>
             <br>
             <asp:TextBox Text="Registrar" ID="Confirmacion" runat="server" CssClass="FormatoTexto" placeholder="Confirmacion" TextMode="Password"></asp:TextBox>
    
-            __________________________________________________
+            ___________________________________________
             <br>
-            <asp:Button runat="server" Text="Registrar" ID="GuardarDatos" CssClass="Botones" OnClick="GuardarDatos_Click" Width="418px"/>
+            <asp:Button runat="server" Text="Registrar" ID="GuardarDatos" CssClass="Botones" OnClick="GuardarDatos_Click"/>
+            
+            <asp:Button  runat="server" Text="Regresar" ID="regresar" CssClass="Botones" OnClick="regresar_Click" ></asp:Button>
             <div class="BarterSlogan">
                 <small>Un Mercado de todo para todos.</small>
                 <br>

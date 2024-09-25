@@ -17,8 +17,12 @@ namespace Barter
         public int Id { get; set; }
         public int Id_Producto { get; set; }
         public int Id_Usuario { get; set; }
+        public Nullable<int> Id_Carrito { get; set; }
+        public Nullable<int> Cantidad { get; set; }
+        public Nullable<System.DateTime> Fecha_Vencimiento { get; set; }
     
         public virtual Producto Producto { get; set; }
         public virtual Usuario Usuario { get; set; }
+        public virtual Carrito Carrito { get; set; }
     }
 }

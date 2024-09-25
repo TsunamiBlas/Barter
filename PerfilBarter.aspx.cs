@@ -16,6 +16,13 @@ namespace Barter
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            if (Session["Usuario"] == null)
+            {
+                Response.Redirect("index.aspx");
+            }
+            Response.Cache.SetCacheability(HttpCacheability.NoCache);
+            Response.Cache.SetExpires(DateTime.UtcNow.AddMinutes(-1));
+            Response.Cache.SetNoStore();
         }
 
         public void limpiar()
@@ -53,14 +60,15 @@ namespace Barter
                     Paterno.Text = oMos.Apellido_Paterno_Usuario;
                     Materno.Text = oMos.Apellido_Materno_Usuario;
                     Correo.Text = oMos.Correo_Usuario;
-                    FechaNacimiento.Text = oMos.Fecha_Nacimiento_Usuario.ToString("dd-mm-aaaa");
+                    FechaNacimiento.Text = oMos.Fecha_Nacimiento_Usuario.ToString("aaaa-mm-dd");
                     telefono.Text = oMos.Telefono_Usuario;
                     contraseña.Text = oMos.Contrasena_Usuario;
                 };
             }
         }
         protected void Editar_Click(object sender, EventArgs e)
-        {
+        { 
+            
             if
                 (string.IsNullOrEmpty(Usuario.Text) ||
                 string.IsNullOrEmpty(Paterno.Text) ||
@@ -80,13 +88,15 @@ namespace Barter
                     Response.Write("Las contraseñas no coinciden.");
                     return;
                 }
+                
                 String vEditar = Usuario.Text;
-                string contrasenaEncriptada = EncriptarContrasena(contraseña.Text);
                 using (Barter_OficialEntities oEditar = new Barter_OficialEntities())
                 {
+                    
                     var usu = oEditar.Usuario.FirstOrDefault(u => u.Nombre_Usuario == vEditar);
                     if (usu != null)
                     {
+                        String contrasenaEncriptada = EncriptarContrasena(contraseña.Text);
                         usu.Nombre_Usuario = Usuario.Text;
                         usu.Apellido_Paterno_Usuario = Paterno.Text;
                         usu.Apellido_Materno_Usuario = Materno.Text;
@@ -100,7 +110,7 @@ namespace Barter
                 };
             }
         }
-        private string EncriptarContrasena(string contrasena)
+        public string EncriptarContrasena(string contrasena)
         {
             using (SHA256 sha256Hash = SHA256.Create())
             {
@@ -160,7 +170,6 @@ namespace Barter
 
                 };
             }
-
         }
     }
 }

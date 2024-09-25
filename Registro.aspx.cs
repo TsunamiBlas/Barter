@@ -82,6 +82,8 @@ namespace Barter
                         };
                         oBD.Usuario.Add(DatosUsuario);
                         oBD.SaveChanges();
+                        Response.Write("Inicio de sesión exitoso.");
+                        Response.Redirect("Principal.aspx");
                         limpiar();
                     }
                 }

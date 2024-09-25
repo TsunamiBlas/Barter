@@ -11,21 +11,20 @@
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
     <style>
-        /* Estilos personalizados */
-        body{
-            background-color:#e3e3e3;  
+        body {
+            background-color: #e3e3e3;
             color: rgb(34, 34, 34);
             transition-property: background-color, color;
             transition-duration: 0.3s;
             transform-origin: 5%;
             transition-delay: initial;
-        }     
-        
-        h1{
+        }
+
+        h1 {
             text-align: center;
         }
 
-        .Contenedor parrafo{
+        .Contenedor parrafo {
             text-align: justify;
         }
 
@@ -44,27 +43,27 @@
             box-sizing: border-box;
         }
 
-        .hm-header .container {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            height: 100%;
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
-
-        .hm-header.header-fixed {
-            position: fixed;
-            width: 100%;
-            top: 0;
-            left: 0;
-            box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.08);
-            z-index: 99;
-            margin-top: 0px;
-            margin-bottom: 0px;
-        }
-
+            .hm-header .container {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                height: 100%;
+                max-width: 1200px;
+                margin: 0 auto;
+                padding: 0 20px;
+            }
+/*
+            .hm-header.header-fixed {
+                position: fixed;
+                width: 100%;
+                top: 0;
+                left: 0;
+                box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.08);
+                z-index: 99;
+                margin-top: 0px;
+                margin-bottom: 0px;
+            }
+*/
         .header-menu {
             display: flex;
             width: 100%;
@@ -72,71 +71,68 @@
             align-items: center;
         }
 
-        .header-menu .hm-logo {
-            margin-right: auto; 
-        }
+            .header-menu .hm-logo {
+                margin-right: auto;
+            }
 
-        .header-menu .hm-logo img {
-            width: 71px;
-            height: 71px;
-            border: 5px solid #474747;
-            border-radius: 50%;
-        }
-
-        .Buscador {
-            flex-grow: 1;
-            margin: 0 20px;
-        }
-
-        .Buscador .form-inline {
-            display: flex;
-            width: 100%;
-        }
-
-        .Buscador .form-inline .form-control {
-            flex-grow: 1;
-            border-radius: 5px 0 0 5px;
-            padding: 8px;
-        }
-
-        .Buscador .form-inline .btn {
-            border-radius: 0 5px 5px 0;
-            padding: 8px 16px;
-        }
+                .header-menu .hm-logo img {
+                    width: 71px;
+                    height: 71px;
+                    border: 5px solid #474747;
+                    border-radius: 50%;
+                }
+         
 
         .hm-menu {
             display: flex;
             align-items: center;
         }
 
-        .hm-menu ul {
-            display: flex;
-            list-style: none;
-            padding: 0;
-            margin: 0;
-        }
+            .hm-menu ul {
+                display: flex;
+                list-style: none;
+                padding: 0;
+                margin: 0;
+            }
 
-        .hm-menu ul li {
-            margin-right: 20px;
-        }
+                .hm-menu ul li {
+                    margin-right: 20px;
+                }
 
-        .hm-menu ul li a {
-            color: var(--color-negro);
-            font-size: 15px;
-            text-decoration: none;
-        }
+                    .hm-menu ul li a {
+                        color: var(--color-negro);
+                        font-size: 15px;
+                        text-decoration: none;
+                    }
 
-        .hm-menu ul li a:hover {
-            color: var(--color-principal);
-        }
+                        .hm-menu ul li a:hover {
+                            color: var(--color-principal);
+                        }
+  .dropdown-menu {
+      display: none;
+      position: absolute;
+      background-color: white;
+      box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.1);
+      z-index: 100;
+      margin-top: 10px;
+      padding: 10px;
+  }
 
-        .cerrar-menu {
-            background-color: transparent;
-            border: none;
-            font-size: 18px;
-            cursor: pointer;
-        }
+  .nav-item.dropdown:hover .dropdown-menu {
+      display: block;
+  }
 
+  .dropdown-menu a {
+      display: block;
+      padding: 5px 10px;
+      text-decoration: none;
+      color: #333;
+  }
+
+  .dropdown-menu a:hover {
+      background-color: #f1f1f1;
+  }
+      
         /* Estilos footer */
         footer {
             background-color: #333;
@@ -144,13 +140,13 @@
             padding: 20px;
             text-align: center;
         }
-    
+
         a {
             margin: 0 10px;
             color: #fff;
             text-decoration: none;
         }
-    
+
         img {
             width: 24px;
             height: 24px;
@@ -158,36 +154,38 @@
     </style>
 </head>
 <body>
-    <form runat="server">
-        <div>
-            <div class="hm-wrapper">
-                <div class="hm-header">
-                    <div class="container">
-                        <div class="header-menu">
-                            <div class="hm-logo">
-                                <a href="Principal.aspx">
-                                    <asp:Image runat="server" ID="logoImage" ImageUrl="~/Img/BarterWhite.png" AlternateText="Logo" CssClass="rounded-circle" />
-                                </a>
-                            </div>
-                            <div class="Buscador">
-                                <form id= "form1"class="form-inline">
-                                    <asp:TextBox runat="server" CssClass="form-control" ID="txtSearch" placeholder="Search"></asp:TextBox>
-                                    <asp:Button runat="server" CssClass="btn btn-outline-dark" Text="Buscar" />
-                                </form>
-                            </div>
-                            <nav class="hm-menu">
-                                <ul>
-                                    <li><a href="Principal.aspx">Inicio</a></li>
-                                    <li><a href="PerfilBarter.aspx">Mi perfil</a></li>  
-                                    <li><a href="https://web.whatsapp.com/send?phone=5515337005">Mensajes</a></li>
-                                    <li><a href="Aviso_Privacidad.aspx">FAQ</a></li>
-                                    <li><a href="Carrito.aspx">Carrito</a></li>
-                                    <li><a href="index.aspx">Salir</a></li>
-                                </ul>
-                            </nav>
-                        </div>
+    <form id="form" runat="server" class="form-inline">
+    <div class="hm-wrapper">
+        <div class="hm-header">
+            <div class="container">
+                <div class="header-menu">
+                    <div class="hm-logo">
+                        <a href="Principal.aspx">
+                            <img style="border-radius: 100%;" src="Img/BarterWhite.png" alt="Logo">
+                        </a>
                     </div>
+                    <nav class="hm-menu">
+                        <ul>
+                            <li><a href="Principal.aspx">Inicio</a></li>
+                            <li><a href="PerfilBarter.aspx">Mi perfil</a></li>  
+                            <li><a href="https://web.whatsapp.com/send?phone=5518784908">Mensajes</a></li>
+                            <li><a href="Productos.aspx"">Productos</a></li>
+                            <li><a href="Carrito.aspx">Carrito</a></li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    Salir
+                                </a>
+                                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                    <a class="dropdown-item" href="Aviso_Privacidad.aspx">Aviso de privacidad</a>
+                                    <div class="dropdown-divider"></div>
+                                    <a class="dropdown-item" href="CerrarSesión.aspx">Cerrar Sesión</a>
+                                </div>
+                        </ul>
+                    </nav>
                 </div>
+            </div>
+        </div>
+    </div>
                 <div class="Aviso">
                     <div class="Contenedor">
                         <h1>AVISO DE PRIVACIDAD</h1>
@@ -284,8 +282,7 @@
         </a>
     </div>
     <div style="margin-top: 20px;">
-        <a href="json.json">Enlace 1</a>
-        <a href="#link2">Enlace 2</a>
+        <a href="factura.aspx">Emite tu factura</a>
     </div>
     <div style="margin-top: 20px;">
         &copy; 2024 Barter: Universidad CUDEC

@@ -19,37 +19,41 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 
 </head>
-    <body>  <!-- Esta es la parta del header -->
+    <body>
+    <form id="form" runat="server" class="form-inline">
         <div class="hm-wrapper">
             <div class="hm-header">
                 <div class="container">
                     <div class="header-menu">
                         <div class="hm-logo">
-                            <a href="/principal.html">
+                            <a href="Principal.aspx">
                                 <img style="border-radius: 100%;" src="Img/BarterWhite.png" alt="Logo">
                             </a>
-                        </div>
-                        <div class="Buscador" data-mdb-input-init>
-                            <form class="form-inline">
-                                <input class="form-control" type="search" placeholder="Search" aria-label="Search">
-                                <button class="btn btn-outline-dark" type="submit">Buscar</button> <!-- Aqui va a ir un if -->
- 
-                            </form>
                         </div>
                         <nav class="hm-menu">
                             <ul>
                                 <li><a href="Principal.aspx">Inicio</a></li>
                                 <li><a href="PerfilBarter.aspx">Mi perfil</a></li>  
-                                <li><a href="https://web.whatsapp.com/send?phone=551533700">Mensajes</a></li>
-                                <li><a href="Aviso_Privacidad.aspx">FAQ</a></li>
+                                <li><a href="https://web.whatsapp.com/send?phone=5518784908">Mensajes</a></li>
+                                <li><a href="Productos.aspx"">Productos</a></li>
                                 <li><a href="Carrito.aspx">Carrito</a></li>
-                                <li><a href="index.aspx">Salir</a></li>
+                                <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                       Salir
+                                </a>
+                                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                 <a class="dropdown-item" href="Aviso_Privacidad.aspx">Aviso de privacidad</a>
+                                <div class="dropdown-divider"></div>
+                                <a class="dropdown-item" href="CerrarSesión.aspx">Cerrar Sesión</a>
+                            </div>
                             </ul>
                         </nav>
                     </div>
                 </div>
             </div>
+        </div>
     
+    </form> 
         <div class="hm-banner">
             <div class="img-banner">
                 <img src="/Img/Banner.jpg" alt="BannerBArter">
@@ -63,24 +67,12 @@
                     <h1>Productos populares</h1>
                 </div>
                 <ul class="hm-tabs" data-aos="fade-up">
-                    <li class="hm-tab-link">
-                        Fruteria y Verduleria
-                    </li>
-                    <li class="hm-tab-link ">
-                        Tecnologia
-                    </li>
-                    <li class="hm-tab-link ">
-                        Comida
-                    </li>
-                    <li class="hm-tab-link ative">
-                        Calzado
-                    </li>
-                    <li class="hm-tab-link ative">
-                        Accesorios
-                    </li>
-                    <li class="hm-tab-link ative">
-                        Molino y semillas
-                    </li>
+                    <li> <a href="Productos.aspx" class="hm-tab-link">Fruteria y Verduleria</a></li>         
+                    <li> <a class="hm-tab-link "  href="Productos.aspx"> Comida </a></li> 
+                    <li>  <a class="hm-tab-link "  href="Productos.aspx"> Calzado </a></li>
+                     <li>  <a class="hm-tab-link "  href="Productos.aspx"> Accesorios </a></li>
+                     <li>  <a class="hm-tab-link "  href="Productos.aspx"> Molino </a></li>
+                     <li>  <a class="hm-tab-link "  href="Productos.aspx"> Semillas </a></li>
                 </ul>                
             </div>
         </div>
@@ -93,7 +85,7 @@
                 <div class="hm-grid-category">
 
                     <div class="grid-item" data-aos="fade-up" data-aos-duration="1000">
-                        <a href="#">
+                        <a href="Productos.aspx">
                             <img src="/BarterPhotos/Frutas.jpeg" alt="">
                             <div class="c-info">
                                 <h3>Fruteria</h3>
@@ -101,7 +93,8 @@
                         </a>
                     </div>
                     <div class="grid-item" data-aos="fade-up" data-aos-duration="1500">
-                        <a href="#">
+                       <a href="Productos.aspx">
+
                             <img src="/BarterPhotos/Refrigerios.jpeg" alt="">
                             <div class="c-info">
                                 <h3>Congelados</h3>
@@ -109,7 +102,8 @@
                         </a>
                     </div>
                     <div class="grid-item" data-aos="fade-up" data-aos-duration="1500">
-                        <a href="#">
+                       <a href="Productos.aspx">
+
                             <img src="/BarterPhotos/tianguis.jpg" alt="">
                             <div class="c-info">
                                 <h3>Variedades</h3>
@@ -117,7 +111,8 @@
                         </a>
                     </div>
                     <div class="grid-item" data-aos="fade-up" data-aos-duration="1500">
-                        <a href="#">
+                        <a href="Productos.aspx">
+
                             <img src="/BarterPhotos/Variedades.jpeg" alt="">
                             <div class="c-info">
                                 <h3>Accesorios</h3>
@@ -134,17 +129,16 @@
                 <script async src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBD-BH5jqUzA8OZGSMPxaBZLGKdOHg-dSs&callback=console.debug&libraries=maps,marker&v=beta">
                 </script>
                 <style>
-           
-                  gmp-map {
-                    height: 100%;
-                  }
-            
-                  html,
-                  body {
-                    height: 100%;
-                    margin: 0;
-                    padding: 0;
-                  }
+                    gmp-map {
+                        height: 100%;
+                    }
+
+                    html,
+                    body {
+                        height: 100%;
+                        margin: 0;
+                        padding: 0;
+                    }
                 </style>
               </head>
               <body>
@@ -178,8 +172,7 @@
         </a>
     </div>
     <div style="margin-top: 20px;">
-        <a href="json.json">Enlace 1</a>
-        <a href="#link2">Enlace 2</a>
+        <a href="factura.aspx">Emite tu factura</a>
     </div>
     <div style="margin-top: 20px;">
         &copy; 2024 Barter: Universidad CUDEC
@@ -194,18 +187,17 @@
             padding: 20px;
             text-align: center;
         }
-    
+
         a {
             margin: 0 10px;
             color: #fff;
             text-decoration: none;
         }
-    
-         footer img {
+
+        footer img {
             width: 24px;
             height: 24px;
         }
     </style>
-    
-    </body>
+        </body>
 </html>

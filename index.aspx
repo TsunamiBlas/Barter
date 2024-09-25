@@ -40,7 +40,7 @@
             <br><br>
             <small>Copyright &copy; Todos los derechos reservados.</small>
             <small>Al continuar, aceptas las condiciones de uso y el <br>
-                <a href="AvisoPriv.aspx" style="text-decoration: none;">Aviso de Privacidad de Barter</a>
+                <a  href="Aviso_Privacidad.aspx" style="text-decoration: none;">Aviso de Privacidad de Barter</a>
             </small>
         </div>
     </div>

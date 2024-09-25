@@ -52,6 +52,9 @@
       <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.4.1.0\lib\net472\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.13.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
     <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.Security" />
     <Reference Include="System.Web.DynamicData" />
@@ -72,6 +75,7 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="CerrarSesión.aspx" />
     <Content Include="Barter_Datos.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <DependentUpon>Barter_Datos.edmx</DependentUpon>
@@ -82,22 +86,27 @@
       <DependentUpon>Barter_Datos.edmx</DependentUpon>
       <LastGenOutput>Barter_Datos.cs</LastGenOutput>
     </Content>
-    <Content Include="CSS\app.css" />
     <Content Include="Aviso_Privacidad.aspx" />
     <Content Include="Carrito.aspx" />
     <Content Include="CSS\Carrito.css" />
+    <Content Include="factura.aspx" />
     <Content Include="index.aspx" />
-    <Content Include="Locales.aspx" />
     <Content Include="PerfilBarter.aspx" />
     <Content Include="Principal.aspx" />
     <Content Include="Productos.aspx" />
-    <Content Include="CSS\Locales.css" />
     <Content Include="Registro.aspx" />
     <Content Include="CSS\principalstyles.css" />
     <Content Include="CSS\styles.css" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CerrarSesión.aspx.cs">
+      <DependentUpon>CerrarSesión.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CerrarSesión.aspx.designer.cs">
+      <DependentUpon>CerrarSesión.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Aviso_Privacidad.aspx.cs">
       <DependentUpon>Aviso_Privacidad.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -131,6 +140,13 @@
       <DependentUpon>Barter_Datos.tt</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
+    <Compile Include="factura.aspx.cs">
+      <DependentUpon>factura.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="factura.aspx.designer.cs">
+      <DependentUpon>factura.aspx</DependentUpon>
+    </Compile>
     <Compile Include="index.aspx.cs">
       <DependentUpon>index.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -140,13 +156,6 @@
     </Compile>
     <Compile Include="Local.cs">
       <DependentUpon>Barter_Datos.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Locales.aspx.cs">
-      <DependentUpon>Locales.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Locales.aspx.designer.cs">
-      <DependentUpon>Locales.aspx</DependentUpon>
     </Compile>
     <Compile Include="Local_Producto.cs">
       <DependentUpon>Barter_Datos.tt</DependentUpon>
@@ -186,6 +195,12 @@
     <Compile Include="Registro.aspx.designer.cs">
       <DependentUpon>Registro.aspx</DependentUpon>
     </Compile>
+    <Compile Include="sp_helpdiagramdefinition_Result.cs">
+      <DependentUpon>Barter_Datos.tt</DependentUpon>
+    </Compile>
+    <Compile Include="sp_helpdiagrams_Result.cs">
+      <DependentUpon>Barter_Datos.tt</DependentUpon>
+    </Compile>
     <Compile Include="sysdiagrams.cs">
       <DependentUpon>Barter_Datos.tt</DependentUpon>
     </Compile>
@@ -204,7 +219,6 @@
     <Content Include="Barter_Datos.edmx.diagram">
       <DependentUpon>Barter_Datos.edmx</DependentUpon>
     </Content>
-    <Content Include="json.json" />
     <None Include="packages.config" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>

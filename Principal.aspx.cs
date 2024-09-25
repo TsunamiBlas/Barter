@@ -14,12 +14,13 @@ namespace Barter
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
-        }
-
-        protected void searchButton_Click(object sender, EventArgs e)
-        {
-
+            if (Session["Usuario"] == null)
+            {
+                Response.Redirect("index.aspx");
+            }
+            Response.Cache.SetCacheability(HttpCacheability.NoCache);
+            Response.Cache.SetExpires(DateTime.UtcNow.AddMinutes(-1));
+            Response.Cache.SetNoStore();
         }
     }
 }
